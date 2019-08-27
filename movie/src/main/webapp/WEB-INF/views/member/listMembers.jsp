@@ -27,7 +27,7 @@
    
  <c:forEach var="member" items="${memberList}" >     
    <tr align="center">
-      <td><a  href="${contextPath}/member/modMemberForm.do?id=${member.id}&action=update">${member.id}</a></td>
+      <td><a href="${contextPath}/member/modMemberForm.do?id=${member.id}&action=update">${member.id}</a></td>
       <td>${member.pwd}</td>
       <td>${member.name}</td>
       <td>${member.email}</td>

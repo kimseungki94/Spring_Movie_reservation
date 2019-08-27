@@ -26,4 +26,30 @@
    select * from movie_member where id=#{id}
 </select>
 
+<update id="updateMemberInfo" parameterType="memberVO">
+  update movie_member
+       set pwd=#{pwd},
+            name=#{name},
+            email=#{email}
+  where id=#{id}
+</update>
+
+<insert id="sample" parameterType="memberVO">
+   insert into movie_member(id,pwd,name,email)
+   values(#{id},#{pwd},#{name},#{email})
+</insert>
+
+
+<select id="selectMemberDBPwd" parameterType="memberVO" resultType="String">
+     select pwd from movie_member where id=#{id} and pwd=#{pwd}
+</select>
+
+<delete id="deleteMember" parameterType="String">
+   delete movie_member where id=#{id}
+</delete>
+
+<select id="selectMemberInfoBymemberVO" 
+            parameterType="memberVO" resultType="memberVO">
+  select * from movie_member where id=#{id} and pwd=#{pwd}
+</select>
 </mapper>

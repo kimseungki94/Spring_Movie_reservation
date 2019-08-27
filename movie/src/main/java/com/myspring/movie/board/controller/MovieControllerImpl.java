@@ -22,7 +22,7 @@ public class MovieControllerImpl implements MovieController {
 	@Autowired
 	private MovieService movieService;
 	@Autowired
-	MovieVO movieVO;
+	MovieVO movieVO; 
 	
 	@Override
 	@RequestMapping(value="/board/listArticles.do",
