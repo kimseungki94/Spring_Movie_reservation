@@ -28,7 +28,7 @@
 			location.href = articleForm;//게시글 입력페이지 이동
 		} else {
 			alert('로그인 후 글쓰기가 가능합니다.');
-			location.href = loginForm + "?action=/board/articleForm.do";//게시글 입력페이지 이동
+			location.href = "/movie/member/loginForm.do";
 		}
 	}
 </script>
